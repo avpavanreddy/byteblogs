@@ -46,7 +46,7 @@ const Create = () => {
                 formData.append("filename", filename)
                 formData.append("image", img)
 
-                await fetch(`http://localhost:4000/upload`, {
+                await fetch(`https://mern-blog-app-i6pc.onrender.com/upload`, {
                     method: "POST",
                     body: formData
                 })

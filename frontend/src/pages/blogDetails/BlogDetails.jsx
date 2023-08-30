@@ -8,7 +8,7 @@ import { request } from '../../utils/fetchApi'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
 import { format } from 'timeago.js'
-import { AiFillEdit, AiFillLike, AiFillDelete, AiOutlineArrowRight, AiOutlineLike } from 'react-icons/ai'
+import { AiFillEdit, AiFillLike, AiFillDelete, AiOutlineArrowLeft, AiOutlineLike } from 'react-icons/ai'
 
 const BlogDetails = () => {
     const [blogDetails, setBlogDetails] = useState("")
@@ -57,10 +57,10 @@ const BlogDetails = () => {
             <Navbar />
             <div className={classes.container}>
                 <Link to='/' className={classes.goBack}>
-                    Go Back <AiOutlineArrowRight />
+                    Go Back <AiOutlineArrowLeft />
                 </Link>
                 <div className={classes.wrapper}>
-                    <img src={`http://localhost:4000/images/${blogDetails?.photo}`} />
+                    <img src={`https://mern-blog-app-i6pc.onrender.com/images/${blogDetails?.photo}`} />
                     <div className={classes.titleAndControls}>
                         <h3 className={classes.title}>{blogDetails?.title}</h3>
                         {blogDetails?.userId?._id === user._id ?
